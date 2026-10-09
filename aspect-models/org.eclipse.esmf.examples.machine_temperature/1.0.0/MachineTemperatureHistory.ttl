@@ -20,10 +20,10 @@
     samm:properties ( :items ) .
 
 :items a samm:Property ;
-    samm:characteristic :MachineTemperatureTimeSeries .
-
-:MachineTemperatureTimeSeries a samm-c:TimeSeries ;
-   samm:dataType :MachineTemperatureTimeSeriesEntity .
+    samm:characteristic [
+        a samm-c:TimeSeries ;
+        samm:dataType :MachineTemperatureTimeSeriesEntity ;
+    ] .
 
 :MachineTemperatureTimeSeriesEntity a samm:Entity ;
    samm:extends samm-e:TimeSeriesEntity ;

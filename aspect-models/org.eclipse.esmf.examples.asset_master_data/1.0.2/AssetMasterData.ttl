@@ -48,7 +48,7 @@
 # to return multiple language-tagged descriptions.
 :description a samm:Property ;
     samm:preferredName "asset description"@en ;
-    samm:preferredname "Asset-Beschreibung"@de ;
+    samm:preferredName "Asset-Beschreibung"@de ;
     samm:description "Human-readable description of an asset."@en ;
     samm:description "Menschenlesbare Beschreibung eines Assets."@de ;
     samm:characteristic samm-c:MultiLanguageText .

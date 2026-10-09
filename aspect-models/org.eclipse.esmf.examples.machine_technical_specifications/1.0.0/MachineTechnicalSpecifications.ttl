@@ -50,6 +50,10 @@
     samm:see <https://schema.org/height> ;
     samm:characteristic :Length .
 
+:depth a samm:Property ;
+    samm:see <https://schema.org/height> ;
+    samm:characteristic :Length .
+
 # samm-c:Quantifiable and samm-c:Measurement are Characteristics
 # that refer to a specific physical unit.
 # For the full list of built-in units, refer to

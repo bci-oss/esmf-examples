@@ -44,6 +44,10 @@
     samm:see <https://schema.org/height> ;
     samm:characteristic :Length .
 
+:depth a samm:Property ;
+    samm:see <https://schema.org/height> ;
+    samm:characteristic :Length .
+
 # The original Quantifiable is turned into the baseCharacteristic
 # of a Trait which takes the original name. This way, referring
 # to :Length logically still means the same thing, but in the
