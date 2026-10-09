@@ -22,22 +22,22 @@
 # instead rename their local use ("payload name").
 
 :AssetMasterData a samm:Aspect ;
-    samm:preferredName "asset master data"@en ;
-    samm:description "Basic information that is available for every asset."@en ;
-    samm:properties (
-        [ samm:property :identifier ; samm:payloadName "assetIdentifier" ]
-        [ samm:property :description ; samm:payloadName "assetDescription" ]
-    ) .
+   samm:preferredName "asset master data"@en ;
+   samm:description "Basic information that is available for every asset."@en ;
+   samm:properties (
+      [ samm:property :identifier ; samm:payloadName "assetIdentifier" ]
+      [ samm:property :description ; samm:payloadName "assetDescription" ]
+   ) .
 
 :identifier a samm:Property ;
-    samm:preferredName "asset identifier"@en ;
-    samm:description "Unique identifer of an asset."@en ;
-    samm:characteristic [
-        a samm-c:Code ;
-        samm:dataType xsd:string ;
-    ] .
+   samm:preferredName "asset identifier"@en ;
+   samm:description "Unique identifer of an asset."@en ;
+   samm:characteristic [
+      a samm-c:Code ;
+      samm:dataType xsd:string ;
+   ] .
 
 :description a samm:Property ;
-    samm:preferredName "asset description"@en ;
-    samm:description "Human-readable description of an asset."@en ;
-    samm:characteristic samm-c:Text .
+   samm:preferredName "asset description"@en ;
+   samm:description "Human-readable description of an asset."@en ;
+   samm:characteristic samm-c:Text .

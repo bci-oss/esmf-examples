@@ -17,42 +17,42 @@
 @prefix : <urn:samm:org.eclipse.esmf.examples.machine_technical_specifications:1.0.0#> .
 
 :MachineTechnicalSpecifications a samm:Aspect ;
-    samm:properties (
-        :dimensions
-        :weight
-        :nominalPower
-    ) .
+   samm:properties (
+      :dimensions
+      :weight
+      :nominalPower
+   ) .
 
 # Multiple Properties can be combined into one Entity. To use this
 # Entity as the type for the Property, we can use the samm-c:SingleEntity
 # Characteristic.
 :dimensions a samm:Property ;
-    samm:characteristic [
-        a samm-c:SingleEntity ;
-        samm:dataType :Dimensions ;
-    ] .
+   samm:characteristic [
+      a samm-c:SingleEntity ;
+      samm:dataType :Dimensions ;
+   ] .
 
 :Dimensions a samm:Entity ;
-    samm:properties (
-        :width
-        :height
-        :depth
-    ) .
+   samm:properties (
+      :width
+      :height
+      :depth
+   ) .
 
 # Width and height refer to the same kind of value, a length.
 # We explicitly express this concept in terms of the Length
 # Characteristic.
 :width a samm:Property ;
-    samm:see <https://schema.org/width> ;
-    samm:characteristic :Length .
+   samm:see <https://schema.org/width> ;
+   samm:characteristic :Length .
 
 :height a samm:Property ;
-    samm:see <https://schema.org/height> ;
-    samm:characteristic :Length .
+   samm:see <https://schema.org/height> ;
+   samm:characteristic :Length .
 
 :depth a samm:Property ;
-    samm:see <https://schema.org/height> ;
-    samm:characteristic :Length .
+   samm:see <https://schema.org/height> ;
+   samm:characteristic :Length .
 
 # samm-c:Quantifiable and samm-c:Measurement are Characteristics
 # that refer to a specific physical unit.
@@ -60,20 +60,20 @@
 # https://eclipse-esmf.github.io/samm-specification/snapshot/appendix/unitcatalog.html
 
 :Length a samm-c:Quantifiable ;
-    samm:dataType xsd:float ;
-    samm-c:unit unit:metre .
+   samm:dataType xsd:float ;
+   samm-c:unit unit:metre .
 
 :weight a samm:Property ;
-    samm:see <https://schema.org/weight> ;
-    samm:characteristic :Weight .
+   samm:see <https://schema.org/weight> ;
+   samm:characteristic :Weight .
 
 :Weight a samm-c:Quantifiable ;
-    samm:dataType xsd:float ;
-    samm-c:unit unit:kilogram .
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilogram .
 
 :nominalPower a samm:Property ;
-    samm:characteristic :Power .
+   samm:characteristic :Power .
 
 :Power a samm-c:Quantifiable ;
-    samm:dataType xsd:float ;
-    samm-c:unit unit:kilowatt .
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilowatt .

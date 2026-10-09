@@ -18,7 +18,7 @@
 
 :MachineOnlineStatus a samm:Aspect ;
    samm:properties (
-       [ samm:property :onlineStatus; samm:payloadName "machineOnlineStatus" ]
+      [ samm:property :onlineStatus; samm:payloadName "machineOnlineStatus" ]
    ) ;
    samm:operations ( :setOnlineStatus ) .
 

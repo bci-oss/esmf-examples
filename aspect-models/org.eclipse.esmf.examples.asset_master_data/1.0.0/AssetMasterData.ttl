@@ -16,12 +16,12 @@
 
 # The following Aspect is the root element of the model.
 :AssetMasterData a samm:Aspect ;
-    samm:preferredName "asset master data"@en ;
-    samm:description "Basic information that is available for every asset."@en ;
-    samm:properties (
-        :assetIdentifier
-        :assetDescription
-    ) .
+   samm:preferredName "asset master data"@en ;
+   samm:description "Basic information that is available for every asset."@en ;
+   samm:properties (
+      :assetIdentifier
+      :assetDescription
+   ) .
 
 # The asset identifier is a code that identifies an asset.
 # Event though its data type is a string, it does not use
@@ -29,16 +29,16 @@
 # is not primarily intended for humans (even though it might
 # be human-readable). Instead, it uses samm-c:Code.
 :assetIdentifier a samm:Property ;
-    samm:preferredName "asset identifier"@en ;
-    samm:description "Unique identifer of an asset."@en ;
-    samm:characteristic [
-        a samm-c:Code ;
-        samm:dataType xsd:string ;
-    ] .
+   samm:preferredName "asset identifier"@en ;
+   samm:description "Unique identifer of an asset."@en ;
+   samm:characteristic [
+      a samm-c:Code ;
+      samm:dataType xsd:string ;
+   ] .
 
 # The asset description on the other hand is explicitly intended
 # for human consumption, so it uses samm-c:Text as its Characteristic.
 :assetDescription a samm:Property ;
-    samm:preferredName "asset description"@en ;
-    samm:description "Human-readable description of an asset."@en ;
-    samm:characteristic samm-c:Text .
+   samm:preferredName "asset description"@en ;
+   samm:description "Human-readable description of an asset."@en ;
+   samm:characteristic samm-c:Text .

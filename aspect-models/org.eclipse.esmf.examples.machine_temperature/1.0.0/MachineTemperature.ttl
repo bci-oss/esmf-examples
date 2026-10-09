@@ -17,9 +17,9 @@
 @prefix : <urn:samm:org.eclipse.esmf.examples.machine_temperature:1.0.0#> .
 
 :MachineTemperature a samm:Aspect ;
-    samm:properties (
-        :currentTemperature
-    ) .
+   samm:properties (
+      :currentTemperature
+   ) .
 
 :currentTemperature a samm:Property ;
-    samm:characteristic :Temperature .
+   samm:characteristic :Temperature .

@@ -17,5 +17,5 @@
 @prefix : <urn:samm:org.eclipse.esmf.examples.machine_temperature:1.0.0#> .
 
 :Temperature a samm-c:Measurement ;
-    samm:dataType xsd:float ;
-    samm-c:unit unit:degreeCelsius .
+   samm:dataType xsd:float ;
+   samm-c:unit unit:degreeCelsius .

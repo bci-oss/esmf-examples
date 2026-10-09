@@ -17,36 +17,36 @@
 @prefix : <urn:samm:org.eclipse.esmf.examples.machine_technical_specifications:1.0.1#> .
 
 :MachineTechnicalSpecifications a samm:Aspect ;
-    samm:properties (
-        :dimensions
-        :weight
-        :nominalPower
-    ) .
+   samm:properties (
+      :dimensions
+      :weight
+      :nominalPower
+   ) .
 
 :dimensions a samm:Property ;
-    samm:characteristic [
-        a samm-c:SingleEntity ;
-        samm:dataType :Dimensions ;
-    ] .
+   samm:characteristic [
+      a samm-c:SingleEntity ;
+      samm:dataType :Dimensions ;
+   ] .
 
 :Dimensions a samm:Entity ;
-    samm:properties (
-        :width
-        :height
-        :depth
-    ) .
+   samm:properties (
+      :width
+      :height
+      :depth
+   ) .
 
 :width a samm:Property ;
-    samm:see <https://schema.org/width> ;
-    samm:characteristic :Length .
+   samm:see <https://schema.org/width> ;
+   samm:characteristic :Length .
 
 :height a samm:Property ;
-    samm:see <https://schema.org/height> ;
-    samm:characteristic :Length .
+   samm:see <https://schema.org/height> ;
+   samm:characteristic :Length .
 
 :depth a samm:Property ;
-    samm:see <https://schema.org/height> ;
-    samm:characteristic :Length .
+   samm:see <https://schema.org/height> ;
+   samm:characteristic :Length .
 
 # The original Quantifiable is turned into the baseCharacteristic
 # of a Trait which takes the original name. This way, referring
@@ -55,33 +55,33 @@
 # Since length can't be negative, we make this explicit with the
 # Constraint.
 :Length a samm-c:Trait ;
-    samm-c:baseCharacteristic [
-        a samm-c:Quantifiable ;
-        samm:dataType xsd:float ;
-        samm-c:unit unit:metre ;
-    ] ;
-    samm-c:constraint :NonNegativeFloatValue .
+   samm-c:baseCharacteristic [
+      a samm-c:Quantifiable ;
+      samm:dataType xsd:float ;
+      samm-c:unit unit:metre ;
+   ] ;
+   samm-c:constraint :NonNegativeFloatValue .
 
 :weight a samm:Property ;
-    samm:see <https://schema.org/weight> ;
-    samm:characteristic :Weight .
+   samm:see <https://schema.org/weight> ;
+   samm:characteristic :Weight .
 
 # The Trait is introduced the same way as for :Length.
 # The weight also can't be negative, so we use the same Constraint.
 :Weight a samm-c:Trait ;
-    samm-c:baseCharacteristic [
-        a samm-c:Quantifiable ;
-        samm:dataType xsd:float ;
-        samm-c:unit unit:kilogram ;
-    ] ;
-    samm-c:constraint :NonNegativeFloatValue .
+   samm-c:baseCharacteristic [
+      a samm-c:Quantifiable ;
+      samm:dataType xsd:float ;
+      samm-c:unit unit:kilogram ;
+   ] ;
+   samm-c:constraint :NonNegativeFloatValue .
 
 :NonNegativeFloatValue a samm-c:RangeConstraint ;
-    samm-c:minValue "0"^^xsd:float .
+   samm-c:minValue "0"^^xsd:float .
 
 :nominalPower a samm:Property ;
-    samm:characteristic :Power .
+   samm:characteristic :Power .
 
 :Power a samm-c:Quantifiable ;
-    samm:dataType xsd:float ;
-    samm-c:unit unit:kilowatt .
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilowatt .
